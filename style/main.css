@@ -1,0 +1,225 @@
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elementos da base */
+
+
+body {
+    background: var(--preto);
+    font-family: 'Teko';
+    color: white;
+}
+
+
+header .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    padding: 0 15px;
+    background-color: rgba(0, 0, 0, 0.50);
+    margin-left: -1px;
+    font-size: 1, 6rem;
+}
+
+
+h1,
+.logo {
+    color: var(--vermelho);
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    align-self: start;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #7d7878;
+    margin: 8px;
+}
+
+nav,
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+}
+
+header nav .nav-links a {
+    color: #AAA;
+    text-decoration: none;
+}
+
+.nav-links li {
+    /* letter-spacing: 2px; */
+    margin-left: 22px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/* Filme Principal */
+
+.filme-principal,
+#capa {
+    width: 100vw;
+}
+
+.filme-principal {
+    background: url("/img/filme-capa-web.jpg") no-repeat center center;
+    background-size: cover;
+    font-family: 'Teko';
+    width: 100%;
+    height: 78vh;
+}
+
+#botoes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 60%;
+    height: 560px;
+    margin-left: -30px;
+}
+
+.botao {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 12%;
+    background-color: rgba(90, 90, 90, 0.50);
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+    padding: 1.5vw 3.0vw;
+    margin-right: 15px;
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.botao:first-child {
+    background-color: rgba(255, 255, 255);
+    color: #000;
+}
+
+i {
+    font-size: 26px;
+}
+
+.botao:first-child:hover {
+    background-color: rgba(200, 200, 200, 0.90);
+    color: #000;
+}
+
+.botao:last-child:hover {
+    background-color: rgba(50, 50, 50, 0.50);
+
+    color: white;
+}
+
+.container {
+    margin-left: 30px;
+}
+
+
+
+/* Scroll de filmes */
+
+
+#btn-left {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 240px;
+    line-height: 240px;
+    text-align: center;
+    z-index: 1;
+    color: rgba(200, 200, 200, 0);
+    cursor: pointer;
+    user-select: none;
+}
+
+#btn-right {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 240px;
+    line-height: 240px;
+    text-align: center;
+    z-index: 1;
+    color: rgba(200, 200, 200, 0);
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#bt1,
+#bt2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#btn-left:hover {
+    color: rgb(249, 5, 5);
+    transition: 5ms;
+}
+
+#btn-right:hover {
+    color: rgb(249, 5, 5);
+
+    transition: 5ms;
+}
+
+section .carrosel-filmes {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    gap: 8px;
+    margin-top: 0;
+    position: absolute;
+    z-index: 0;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+section .carrosel-filmes::-webkit-scrollbar {
+    display: none;
+}
+
+section .box-filmes {
+    width: 150px;
+    height: 240px;
+    display: inline-block;
+    border-radius: 4px;
+    position: relative;
+    left: 8px;
+
+}
