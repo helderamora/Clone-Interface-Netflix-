@@ -1,6 +1,9 @@
 :root {
     --vermelho: #E50914;
     --preto: #141414;
+    --cinza-1: #7d7878;
+    --cinza-2: #AAA;
+    --branco: #fff;
 }
 
 * {
@@ -50,7 +53,7 @@ h1,
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background-color: #7d7878;
+    background-color: var(--cinza-1);
     margin: 8px;
 }
 
@@ -74,7 +77,7 @@ header nav .nav-links a {
 }
 
 header nav a:hover {
-    color: #fff;
+    color: var(--branco);
 }
 
 /* Filme Principal */
@@ -85,11 +88,12 @@ header nav a:hover {
 }
 
 .filme-principal {
-    background: url("/img/filme-capa-web.jpg") no-repeat center center;
+    background-image: url(../img/venom.jpg);
     background-size: cover;
     font-family: 'Teko';
     width: 100%;
-    height: 78vh;
+    max-width: 1520px;
+    height: 86vh;
 }
 
 #botoes {
@@ -98,7 +102,7 @@ header nav a:hover {
     align-items: flex-end;
     width: 60%;
     height: 560px;
-    margin-left: -30px;
+    margin-left: -100px;
 }
 
 .botao {
@@ -109,7 +113,7 @@ header nav a:hover {
     background-color: rgba(90, 90, 90, 0.50);
     border: none;
     border-radius: 5px;
-    color: white;
+    color: var(--branco);
 
     padding: 1.5vw 3.0vw;
     margin-right: 15px;
